@@ -1,0 +1,26 @@
+.header{
+  text-align: center;
+  background-color: #04009a;
+  width: 100%;
+  height: 100px;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logos{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.titulo{
+  font-size: xx-large;
+  color: aliceblue;
+}
+
+img{
+  width: 75px;
+  height: 75px;
+}
