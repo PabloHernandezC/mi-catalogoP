@@ -1,0 +1,49 @@
+<div *ngFor="let auto of autos" class="cuerpo">
+  <ngb-accordion>
+    <ngb-panel>
+      <ng-template ngbPanelTitle>
+        <table class="tabla">
+          <tr>
+            <td><img src="/assets/eye.png" class="ojo"></td>
+            <td><b>{{auto.descripcion}}</b></td>
+          </tr>
+        </table>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div class="datos">
+          <div>
+            <h2>Datos del Auto</h2>
+            <table class="table table-striped">
+              <tbody>
+                <tr>
+                  <td>Marca</td>
+                  <td>{{auto.marca}}</td>
+                </tr>
+                <tr>
+                  <td>Submarca</td>
+                  <td>{{auto.submarca}}</td>
+                </tr>
+                <tr>
+                  <td>modelo</td>
+                  <td>{{auto.modelo}}</td>
+                </tr>
+                <tr>
+                  <td>Descripcion</td>
+                  <td>{{auto.descripcion}}</td>
+                </tr>
+                <tr>
+                  <td>Registro</td>
+                  <td>{{auto.fecha_registro}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <img src="{{auto.foto}}" class="carro" >
+          </div>
+        </div>
+
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</div>
