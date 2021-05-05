@@ -3,11 +3,11 @@ import { Automovil } from '../models';
 import { AUTOMOVILES } from '../data';
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  selector: 'app-tabla',
+  templateUrl: './tabla.component.html',
+  styleUrls: ['./tabla.component.css']
 })
-export class ListComponent implements OnInit {
+export class TablaComponent implements OnInit {
   autos: Automovil[];
   autoSeleccionado: Automovil;
 

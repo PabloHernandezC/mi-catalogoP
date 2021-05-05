@@ -1,0 +1,14 @@
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.titulo{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+

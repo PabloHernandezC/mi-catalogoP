@@ -1,0 +1,38 @@
+.contenedor{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 78.7%;
+}
+
+.cuadro{
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: center;
+
+}
+
+.logo{
+  width: 600px;
+  height: 400px;
+}
+
+.ctexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+}
+
+#Error{
+  color: brown;
+}
+
+.pensando{
+  width: 150px;
+  height: 250px;
+}

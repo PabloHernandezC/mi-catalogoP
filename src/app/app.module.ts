@@ -9,6 +9,8 @@ import { MenuComponent } from './menu/menu.component';
 import { ListComponent } from './list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TablaComponent } from './tabla/tabla.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     MenuComponent,
     ListComponent,
+    TablaComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
