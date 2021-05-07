@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AutosService } from '../autos.service';
 import { Automovil } from '../models';
-import { AUTOMOVILES } from '../data';
+
 
 @Component({
   selector: 'app-tabla',
@@ -9,12 +10,15 @@ import { AUTOMOVILES } from '../data';
 })
 export class TablaComponent implements OnInit {
   autos: Automovil[];
-  autoSeleccionado: Automovil;
+  page = 1;
+  pageSize = 10;
 
-  constructor() { }
+  constructor(private autoService: AutosService) { }
 
   ngOnInit(): void {
-    this.autos = AUTOMOVILES;
+    this.autoService.getAutos().subscribe((response)=>{
+      this.autos = response.data;
+    })
   }
 
 }

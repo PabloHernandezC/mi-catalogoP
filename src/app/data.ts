@@ -1,7 +1,8 @@
 import { Automovil } from './models';
-
+/*
 export const AUTOMOVILES: Automovil[] = [
     {
+        id: 1,
         marca: 'Toyota',
         submarca: 'Corolla',
         modelo: 2010,
@@ -10,6 +11,7 @@ export const AUTOMOVILES: Automovil[] = [
         foto: "/assets/toyota Cerrolla 2010.jpg"
     },
     {
+        id: 2,
         marca: 'Honda',
         submarca: 'Civic',
         modelo: 2018,
@@ -18,6 +20,7 @@ export const AUTOMOVILES: Automovil[] = [
         foto: '/assets/Honda Civic 2018.jpg'
     },
     {
+        id: 3,
         marca: 'Honda',
         submarca: 'Civic',
         modelo: 2018,
@@ -26,6 +29,7 @@ export const AUTOMOVILES: Automovil[] = [
         foto: '/assets/Honda Civic 2018 e.jpg'
     },
     {
+        id: 4,
         marca: 'Toyota',
         submarca: 'Camry',
         modelo: 2010,
@@ -34,6 +38,7 @@ export const AUTOMOVILES: Automovil[] = [
         foto: '/assets/Toyota Camry 2010.jpg'
     },
     {
+        id: 5,
         marca: 'Honda',
         submarca: 'City',
         modelo: 2010,
@@ -42,4 +47,4 @@ export const AUTOMOVILES: Automovil[] = [
         foto: '/assets/Honda City 2010.jpg'
     }
 
-]
+]*/

@@ -9,22 +9,28 @@
           <th>#</th>
           <th>Marca</th>
           <th>SubMarca</th>
-          <th>Modelo</th>
+          <th>Descripcion Corta</th>
           <th>Descripcion</th>
-          <th>Fecha de Registro</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let auto of autos; index as i">
+        <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize ; index as i">
           <th scope="row">{{ i + 1 }}</th>
           <td> {{auto.marca}} </td>
           <td> {{auto.submarca}} </td>
-          <td> {{auto.modelo}} </td>
+          <td> {{auto.descripcioncorta}} </td>
           <td> {{auto.descripcion}} </td>
-          <td> {{auto.fecha_registro}} </td>
+          <td>
+            <img src="/assets/edit-regular.svg" alt="Edit" class="logo">
+            <img src="/assets/trash-alt-regular.svg" alt="Delete" class="logo">
+          </td>
         </tr>
       </tbody>
     </table>
   </div>
-
+  <div class="d-flex justify-content-between p-2">
+    <ngb-pagination [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize">
+    </ngb-pagination>
+  </div>
 </div>

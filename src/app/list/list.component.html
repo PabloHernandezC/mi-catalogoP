@@ -1,11 +1,11 @@
-<div *ngFor="let auto of autos" class="cuerpo">
+<div class="cuerpo" *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize">
   <ngb-accordion>
     <ngb-panel>
       <ng-template ngbPanelTitle>
         <table class="tabla">
           <tr>
             <td><img src="/assets/eye.png" class="ojo"></td>
-            <td><b>{{auto.descripcion}}</b></td>
+            <td><b>{{auto.descripcioncorta}}</b></td>
           </tr>
         </table>
       </ng-template>
@@ -31,15 +31,8 @@
                   <td>Descripcion</td>
                   <td>{{auto.descripcion}}</td>
                 </tr>
-                <tr>
-                  <td>Registro</td>
-                  <td>{{auto.fecha_registro}}</td>
-                </tr>
               </tbody>
             </table>
-          </div>
-          <div>
-            <img src="{{auto.foto}}" class="carro" >
           </div>
         </div>
 
@@ -47,3 +40,13 @@
     </ngb-panel>
   </ngb-accordion>
 </div>
+<ngb-pagination class="cuerpo paginado"
+  [(page)]="page"
+  [pageSize]="pageSize"
+  [collectionSize]="autos.length"
+  [maxSize]="5"
+  [rotate]="true"
+  [ellipses]="false"
+  [boundaryLinks]="true"
+  size="lg"
+  ></ngb-pagination>
