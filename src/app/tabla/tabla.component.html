@@ -2,6 +2,15 @@
   <div class="titulo">
     <h1><b>Tabla de Autos Registrados</b></h1>
   </div>
+  <div class="menu">
+    <div class="form-group form-inline">
+      Buscar: <input class="form-control ml-2" type="text" >
+    </div>
+    <div class="" id="">
+      <button type="button" class="btn btn-dark" (click)="openModalCreate()">Agregar <b>+</b></button>
+    </div>
+  </div>
+
   <div class="tabla">
     <table class="table table-striped">
       <thead>
@@ -11,26 +20,36 @@
           <th>SubMarca</th>
           <th>Descripcion Corta</th>
           <th>Descripcion</th>
-          <th>Acciones</th>
+          <th colspan="2">Acciones</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : page * pageSize ; index as i">
-          <th scope="row">{{ i + 1 }}</th>
+          <th scope="row"> {{auto._id}} </th>
           <td> {{auto.marca}} </td>
           <td> {{auto.submarca}} </td>
           <td> {{auto.descripcioncorta}} </td>
           <td> {{auto.descripcion}} </td>
-          <td>
-            <img src="/assets/edit-regular.svg" alt="Edit" class="logo">
-            <img src="/assets/trash-alt-regular.svg" alt="Delete" class="logo">
+          <td (click)="openModalEdit(auto)">
+            <button class="boton"><img src="/assets/edit-regular.svg" alt="Edit" class="logo"></button>
+          </td>
+          <td (click)="openModalDelete(auto)">
+            <button class="boton" id="btnDelete"><img src="/assets/trash-alt-regular.svg" alt="Delete" class="logo"></button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="d-flex justify-content-between p-2">
-    <ngb-pagination [collectionSize]="autos.length" [(page)]="page" [pageSize]="pageSize">
-    </ngb-pagination>
+    <ngb-pagination class="cuerpo paginado"
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="coleccion"
+    [maxSize]="5"
+    [rotate]="true"
+    [ellipses]="false"
+    [boundaryLinks]="true"
+    size="lg"
+    ></ngb-pagination>
   </div>
 </div>

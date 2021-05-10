@@ -1,0 +1,32 @@
+<div class="modal-heade titulo">
+  <button type="button" class="close cerrar" aria-label="Close" (click)="activeModal.dismiss('Lo Cerre')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h2 class="modal-title"><b>{{accion}}</b></h2>
+</div>
+<hr>
+<div class="modal-body">
+  <form #formAutos = "ngForm">
+    <div class="form-group">
+      <label for="marca">Marca</label>
+      <input type="text" class="form-control" id="marca" placeholder="Agrega la Marca" [(ngModel)]="auto.marca" name="marca">
+    </div>
+    <div class="form-group">
+      <label for="submarca">Submarca</label>
+      <input type="text" class="form-control" id="submarca" placeholder="Agrega la Submarca" [(ngModel)]="auto.submarca" name="submarca">
+    </div>
+    <div class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input type="text" class="form-control" id="descripcion" placeholder="Agrega la Descripcion" [(ngModel)]="auto.descripcion"
+      name="descripcion">
+    </div>
+    <div class="form-group">
+      <label for="modelo">Modelos</label>
+      <input type="text" disabled class="form-control" id="modelo" placeholder="Agrega la Modelos" [(ngModel)]="auto.modelo" name="modelo">
+    </div>
+
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(auto)" >Guardar</button>
+    </div>
+  </form>
+</div>

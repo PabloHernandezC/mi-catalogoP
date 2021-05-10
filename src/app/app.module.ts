@@ -12,6 +12,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TablaComponent } from './tabla/tabla.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ModalEditComponent } from './modal-edit/modal-edit.component';
+import { FormsModule } from '@angular/forms';
+import { MensajeEliminarComponent } from './mensaje-eliminar/mensaje-eliminar.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ListComponent,
     TablaComponent,
     PageNotFoundComponent,
+    ModalEditComponent,
+    MensajeEliminarComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,8 +34,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatExpansionModule,
     NgbModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalEditComponent]
 })
 export class AppModule { }

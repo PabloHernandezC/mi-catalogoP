@@ -1,0 +1,15 @@
+.titulo{
+  margin-top: 5px;
+  text-align: center;
+  background-color: brown;
+}
+
+.cerrar{
+  margin-right: 10px;
+}
+
+.cerrar:hover{
+  transition: 0.5s;
+  background-color: crimson;
+  color: aqua;
+}

@@ -13,14 +13,19 @@ export class ListComponent implements OnInit {
   autos: Automovil[];
   page = 1;
   pageSize = 10;
+  coleccion: number;
 
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
 
   ngOnInit(): void {
 
     this.autoService.getAutos().subscribe((response)=>{
-      this.autos = response.data;
-    })
+      this.autos = response.data
+
+      this.coleccion = Number(Object.keys(response.data).length)
+
+      console.log(this.coleccion)
+    });
 
   }
 

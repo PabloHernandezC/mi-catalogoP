@@ -1,0 +1,37 @@
+<div class="modal-heade titulo">
+  <button type="button" class="close cerrar" aria-label="Close" (click)="activeModal.dismiss('Lo Cerre')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h2 class="modal-title"><b>Mensaje Importante</b></h2>
+</div>
+<hr>
+<div class="modal-body">
+  <form>
+    <div class="form-group">
+      <h2>Estas apunto de eliminar el siguiente Elemento</h2>
+      <table class="table table-striped">
+        <tr>
+          <td><b>Marca</b></td>
+          <td> {{auto.marca}} </td>
+        </tr>
+        <tr>
+          <td><b>Sub Marca</b></td>
+          <td> {{auto.submarca}} </td>
+        </tr>
+        <tr>
+          <td><b>Descripcion Corta</b></td>
+          <td> {{auto.descripcioncorta}} </td>
+        </tr>
+        <tr>
+          <td><b>Descripcion</b></td>
+          <td> {{auto.descripcion}} </td>
+        </tr>
+
+      </table>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark" (click)="activeModal.dismiss('Lo Cerre')">Cancelar</button>
+      <button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(auto)">Eliminar</button>
+    </div>
+  </form>
+</div>

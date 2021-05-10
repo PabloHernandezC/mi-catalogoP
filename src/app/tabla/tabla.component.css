@@ -17,3 +17,29 @@
   height: 30px;
 }
 
+.boton{
+  border: none;
+  background-color: transparent;
+}
+
+.boton:hover{
+  background-color: yellow  ;
+}
+
+#btnDelete:hover{
+  background-color: crimson;
+}
+
+#btnAgregar{
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 900px;
+  align-items: baseline;
+}
+
+.menu{
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
