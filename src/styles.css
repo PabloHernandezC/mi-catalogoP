@@ -5,3 +5,11 @@ body, html{
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ng-valid[required]{
+  border-left: 5px solid green;
+}
+
+.ng-invalid:not(form){
+  border-left:  5px solid crimson;
+}

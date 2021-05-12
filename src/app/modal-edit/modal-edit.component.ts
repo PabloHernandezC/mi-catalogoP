@@ -16,4 +16,8 @@ export class ModalEditComponent {
 
   constructor(public activeModal:NgbActiveModal) { }
 
+  onSubmit(){
+    this.activeModal.close(this.auto)
+  }
+
 }

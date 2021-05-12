@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ModalEditComponent } from './modal-edit/modal-edit.component';
 import { FormsModule } from '@angular/forms';
 import { MensajeEliminarComponent } from './mensaje-eliminar/mensaje-eliminar.component';
+import { RangoModeloDirective } from './directives/rango-modelo.directive';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MensajeEliminarComponent } from './mensaje-eliminar/mensaje-eliminar.co
     PageNotFoundComponent,
     ModalEditComponent,
     MensajeEliminarComponent,
+    RangoModeloDirective,
   ],
   imports: [
     BrowserModule,
